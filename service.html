@@ -1,0 +1,845 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wine & Craft Spirits Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="service.css">
+</head>
+
+<body>
+
+   
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+
+                <img src="images/logo.png"
+                     alt="Wine & Craft Spirits Store Logo"
+                     class="logo-image">
+
+                <span class="brand-details">
+
+                    <span class="brand-name">
+                        <span class="brand-wine">Wine</span>
+                        <span class="brand-amp">&</span>
+                        <span class="brand-craft">Craft</span>
+                    </span>
+
+                    <span class="brand-tagline">
+                        Discover. Sip. Savour.
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open navigation"
+                    aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+           
+            <div class="header-right" id="headerRight">
+
+                <nav class="main-nav" aria-label="Main navigation">
+
+                    <ul class="nav-list">
+
+                        
+                        <li class="nav-item home-item">
+
+                            <button class="nav-link dropdown-toggle"
+                                    id="homeToggle"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                Home
+                                <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+
+                            </button>
+
+                            <ul class="dropdown-menu" id="homeMenu">
+
+                                <li>
+                                    <a href="index.html">Home 1</a>
+                                </li>
+
+                                <li>
+                                    <a href="home2.html">Home 2</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="service.html" class="nav-link active">Services</a>
+                        </li>
+
+                        
+
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link">Blog</a>
+                        </li>
+
+                       
+
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+
+                
+                <div class="header-actions">
+
+                    <button class="control-btn"
+                            id="directionBtn"
+                            type="button"
+                            aria-label="Switch to right-to-left layout">
+
+                        <i class="fa-solid fa-right-left"></i>
+                        <span id="directionText">RTL</span>
+
+                    </button>
+
+                    <button class="control-btn"
+                            id="themeBtn"
+                            type="button"
+                            aria-label="Switch to dark mode">
+
+                        <i class="fa-solid fa-moon" id="themeIcon"></i>
+                        <span id="themeText">Dark</span>
+
+                    </button>
+                    
+
+                    <a href="login.html" class="login-btn">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Login</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+    
+
+<body>
+    <main class="wine-services">
+
+        <section class="service-hero">
+            <div class="service-hero-overlay"></div>
+            <div class="service-hero-content service-reveal">
+                <span class="service-eyebrow"><span></span> OUR SERVICES <span></span></span>
+                <h1>Exceptional Drinks.<br><em>Unforgettable Moments.</em></h1>
+                <p>Discover thoughtful wine selections, handcrafted spirits, curated gifts, and memorable experiences made for every occasion.</p>
+                <a href="#our-services" class="service-button">Explore Our Services <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+            <div class="hero-side-label">A WORLD OF TASTE</div>
+            <div class="hero-decoration"></div>
+        </section>
+
+        <section class="service-intro section-space">
+            <div class="service-intro-image service-reveal">
+                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1000&q=85" alt="Wine glasses and bottles arranged for a tasting">
+                
+            </div>
+            <div class="service-intro-content service-reveal">
+<div class="green-label">
+                <span class="green-line"></span>
+                <span class="green-text">THE ART OF GOOD TASTE</span>
+            </div>             
+               <h2>More Than a Store.<br><em>A Complete Experience.</em></h2>
+                <p>Great drinks bring people together. We make discovering them easier with carefully selected wines, distinctive craft spirits, and personal service tailored to your taste.</p>
+                <p>Whether you're celebrating a milestone, planning an intimate gathering, or searching for a thoughtful gift, we're here to help you find something special.</p>
+                <div class="intro-highlights">
+                    <div><i class="fa-solid fa-check"></i><span>Carefully selected collections</span></div>
+                    <div><i class="fa-solid fa-check"></i><span>Personalized recommendations</span></div>
+                    <div><i class="fa-solid fa-check"></i><span>Something for every occasion</span></div>
+                </div>
+                <br>
+                <div class="service-button">
+                    <i class="fa-solid fa-wine-glass"></i>
+                    <span>Discover your next favorite</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-list-section section-space" id="our-services">
+            <div class="service-section-heading service-reveal">
+                <h2>Explore Our <em>Services</em></h2>
+                <p>From everyday discoveries to once-in-a-lifetime celebrations, find the experience that suits you.</p>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card service-reveal">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1516594798947-e65505dbb29d?auto=format&fit=crop&w=900&q=85" alt="Red wine being poured into a glass">
+                        <span class="service-card-number">01</span>
+                        <span class="service-card-icon"><i class="fa-solid fa-wine-glass"></i></span>
+                    </div>
+                    <div class="service-card-content">
+                        <span class="service-card-label">FOR EVERY PALATE</span>
+                        <h3>Wine Selection</h3>
+                        <p>Explore red, white, rosé, and sparkling wines chosen for their character, quality, and distinctive flavors.</p>
+                        <a href="s1.html">Discover More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="service-card service-reveal">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?auto=format&fit=crop&w=900&q=85" alt="Premium spirits bottles displayed on a shelf">
+                        <span class="service-card-number">02</span>
+                        <span class="service-card-icon"><i class="fa-solid fa-whiskey-glass"></i></span>
+                    </div>
+                    <div class="service-card-content">
+                        <span class="service-card-label">DISTINCTIVE & REFINED</span>
+                        <h3>Craft Spirits</h3>
+                        <p>Discover distinctive whiskey, gin, rum, and other spirits selected for enthusiasts who appreciate craftsmanship.</p>
+                        <a href="s1.html">Discover More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="service-card service-reveal">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=900&q=85" alt="Thoughtfully wrapped gift ready for a celebration">
+                        <span class="service-card-number">03</span>
+                        <span class="service-card-icon"><i class="fa-solid fa-gift"></i></span>
+                    </div>
+                    <div class="service-card-content">
+                        <span class="service-card-label">MADE TO IMPRESS</span>
+                        <h3>Luxury Gifting</h3>
+                        <p>Choose thoughtful wine and spirit gifts for birthdays, anniversaries, celebrations, and special thank-yous.</p>
+                        <a href="s1.html">Discover More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="service-card service-reveal">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85" alt="Elegant table setup for a private celebration">
+                        <span class="service-card-number">04</span>
+                        <span class="service-card-icon"><i class="fa-solid fa-champagne-glasses"></i></span>
+                    </div>
+                    <div class="service-card-content">
+                        <span class="service-card-label">CELEBRATE BEAUTIFULLY</span>
+                        <h3>Event Selections</h3>
+                        <p>Find suitable bottles for dinners, celebrations, and gatherings with recommendations tailored to your event.</p>
+                        <a href="s1.html">Discover More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="service-card service-reveal">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=85" alt="Carefully prepared drinks for a tasting experience">
+                        <span class="service-card-number">05</span>
+                        <span class="service-card-icon"><i class="fa-solid fa-book-open"></i></span>
+                    </div>
+                    <div class="service-card-content">
+                        <span class="service-card-label">LEARN SOMETHING NEW</span>
+                        <h3>Tasting Guidance</h3>
+                        <p>Explore flavor profiles, grape varieties, and spirit styles to feel more confident about your next selection.</p>
+                        <a href="s1.html">Discover More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="service-card service-reveal">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85" alt="Warm and inviting setting prepared for guests">
+                        <span class="service-card-number">06</span>
+                        <span class="service-card-icon"><i class="fa-solid fa-heart"></i></span>
+                    </div>
+                    <div class="service-card-content">
+                        <span class="service-card-label">PERSONAL TO YOU</span>
+                        <h3>Personal Recommendations</h3>
+                        <p>Tell us about your preferences, budget, or occasion and find options that match your individual taste.</p>
+                        <a href="s1.html">Discover More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="service-experience section-space">
+            <div class="experience-image service-reveal">
+                <img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?auto=format&fit=crop&w=1200&q=85" alt="Wine bottles stored in a traditional cellar">
+                <div class="experience-stamp">
+                    <i class="fa-solid fa-star"></i>
+                    <span>QUALITY</span>
+                    <span>IN EVERY DETAIL</span>
+                </div>
+            </div>
+            <div class="experience-content service-reveal">
+                <div class="green-label">
+                <span class="green-line"></span>
+                <span class="green-text">A MORE PERSONAL TOUCH</span>
+            </div>   
+                <h2>Thoughtfully Chosen.<br><em>Beautifully Experienced.</em></h2>
+                <p>Finding the right bottle should feel exciting, not overwhelming. Our approach combines a considered collection with helpful guidance at every step.</p>
+                <div class="experience-point">
+                    <span class="experience-point-icon"><i class="fa-solid fa-gem"></i></span>
+                    <div><h3>Quality First</h3><p>Selections chosen with care, character, and craftsmanship in mind.</p></div>
+                </div>
+                <div class="experience-point">
+                    <span class="experience-point-icon"><i class="fa-solid fa-comments"></i></span>
+                    <div><h3>Friendly Guidance</h3><p>Helpful recommendations based on your preferences and occasion.</p></div>
+                </div>
+                <div class="experience-point">
+                    <span class="experience-point-icon"><i class="fa-solid fa-box-open"></i></span>
+                    <div><h3>Special Details</h3><p>Thoughtful gifting and selections that make celebrations feel personal.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-occasions section-space">
+            <div class="service-section-heading service-reveal">
+                <h2>Every Occasion Has <em>a Story</em></h2>
+                <p>Find a thoughtful choice for the people, milestones, and moments you want to celebrate.</p>
+            </div>
+            <div class="occasion-grid">
+                <article class="occasion-card service-reveal">
+                    <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=900&q=85" alt="Friends enjoying time together">
+                    <div class="occasion-content"><span>01 / TOGETHERNESS</span><h3>Intimate Gatherings</h3><p>Bring people together with bottles suited to the atmosphere.</p></div>
+                </article>
+                <article class="occasion-card service-reveal">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=85" alt="Beautifully styled celebration cake">
+                    <div class="occasion-content"><span>02 / MILESTONES</span><h3>Special Celebrations</h3><p>Mark meaningful occasions with a considered selection.</p></div>
+                </article>
+                <article class="occasion-card service-reveal">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=900&q=85" alt="Elegant gift wrapping and ribbon">
+                    <div class="occasion-content"><span>03 / THOUGHTFULNESS</span><h3>Meaningful Gifts</h3><p>Give a memorable gift chosen with care and attention.</p></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="service-cta" id="service-contact">
+            <div class="service-cta-pattern"></div>
+            <div class="service-cta-content service-reveal">
+                <h2>Something Special <em>Starts Here.</em></h2>
+                <p>Tell us what you're celebrating or what you love. We'll help you explore a selection that feels just right.</p>
+                <a href="contact.html" class="service-button">Get in Touch <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="cta-circle cta-circle-one"></div>
+            <div class="cta-circle cta-circle-two"></div>
+        </section>
+
+    </main>
+    
+
+
+
+
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+           
+            <div class="footer-brand">
+
+                <a href="index.html" class="brand footer-logo">
+
+                    <img src="images/logo.png"
+                         alt="Wine & Craft Spirits Store Logo"
+                         class="logo-image">
+
+                    <span class="brand-details">
+
+                        <span class="brand-name">
+                            <span class="brand-wine">Wine</span>
+                            <span class="brand-amp">&</span>
+                            <span class="brand-craft">Craft</span>
+                        </span>
+
+                        <span class="brand-tagline">
+                            Discover. Sip. Savour.
+                        </span>
+
+                    </span>
+
+                </a>
+
+                <p class="footer-description">
+                    Discover a thoughtfully curated collection of wines
+                    and craft spirits for every occasion.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+                     <a href="#" aria-label="Google">
+                       <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                   
+                </ul>
+
+            </div>
+
+
+           
+            <div class="footer-column">
+
+                <h3>Customer Care</h3>
+
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="shipping.html">Shipping Information</a></li>
+                    <li><a href="returns.html">Returns Policy</a></li>
+                </ul>
+
+            </div>
+
+
+           
+            <div class="footer-column footer-contact">
+
+                <h3>Contact Us</h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Your Store Address, Your City</span>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+910000000000">+91 00000 00000</a>
+                </p>
+
+                <p>
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:hello@wineandcraft.com">
+                        hello@wineandcraft.com
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        
+        <div class="footer-bottom">
+
+            <p>
+                &copy; <span id="currentYear"></span>
+                <span class="copyright-name">Wine & Craft Spirits Store</span>.
+                All rights reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const html = document.documentElement;
+    const body = document.body;
+
+    const themeBtn = document.getElementById("themeBtn");
+    const themeIcon = document.getElementById("themeIcon");
+    const themeText = document.getElementById("themeText");
+
+    const directionBtn = document.getElementById("directionBtn");
+    const directionText = document.getElementById("directionText");
+
+    const menuToggle = document.getElementById("menuToggle");
+    const headerRight = document.getElementById("headerRight");
+
+    const homeToggle = document.getElementById("homeToggle");
+    const homeItem = document.querySelector(".home-item");
+
+    const currentYear = document.getElementById("currentYear");
+
+
+    // =====================================
+    // LIGHT / DARK MODE
+    // =====================================
+
+    function applyTheme(theme) {
+
+        const isDark = theme === "dark";
+
+        body.classList.toggle("dark-mode", isDark);
+
+        if (themeIcon) {
+            themeIcon.className = isDark
+                ? "fa-solid fa-sun"
+                : "fa-solid fa-moon";
+        }
+
+        if (themeText) {
+            themeText.textContent = isDark ? "Light" : "Dark";
+        }
+
+        if (themeBtn) {
+            themeBtn.setAttribute(
+                "aria-label",
+                isDark ? "Switch to light mode" : "Switch to dark mode"
+            );
+
+            themeBtn.setAttribute("aria-pressed", String(isDark));
+        }
+    }
+
+
+    let savedTheme = "light";
+
+    try {
+        savedTheme = localStorage.getItem("wineCraftTheme") || "light";
+    } catch (error) {
+        savedTheme = "light";
+    }
+
+    applyTheme(savedTheme);
+
+
+    if (themeBtn) {
+
+        themeBtn.addEventListener("click", function () {
+
+            const newTheme = body.classList.contains("dark-mode")
+                ? "light"
+                : "dark";
+
+            applyTheme(newTheme);
+
+            try {
+                localStorage.setItem("wineCraftTheme", newTheme);
+            } catch (error) {
+                // The theme still works without local storage.
+            }
+
+        });
+
+    }
+
+
+    // =====================================
+    // RTL / LTR DIRECTION
+    // =====================================
+
+    function applyDirection(direction) {
+
+        html.setAttribute("dir", direction);
+
+        if (directionText) {
+            directionText.textContent =
+                direction === "rtl" ? "LTR" : "RTL";
+        }
+
+        if (directionBtn) {
+            directionBtn.setAttribute(
+                "aria-label",
+                direction === "rtl"
+                    ? "Switch to left-to-right layout"
+                    : "Switch to right-to-left layout"
+            );
+
+            directionBtn.setAttribute(
+                "aria-pressed",
+                String(direction === "rtl")
+            );
+        }
+    }
+
+
+    let savedDirection = "ltr";
+
+    try {
+        savedDirection = localStorage.getItem("wineCraftDirection") || "ltr";
+    } catch (error) {
+        savedDirection = "ltr";
+    }
+
+    applyDirection(savedDirection);
+
+
+    if (directionBtn) {
+
+        directionBtn.addEventListener("click", function () {
+
+            const newDirection =
+                html.getAttribute("dir") === "rtl" ? "ltr" : "rtl";
+
+            applyDirection(newDirection);
+
+            try {
+                localStorage.setItem("wineCraftDirection", newDirection);
+            } catch (error) {
+                // Direction still works without local storage.
+            }
+
+        });
+
+    }
+
+
+    // =====================================
+    // MOBILE MENU
+    // =====================================
+
+    function closeMobileMenu() {
+
+        if (headerRight) {
+            headerRight.classList.remove("mobile-open");
+        }
+
+        if (menuToggle) {
+
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation");
+
+            const icon = menuToggle.querySelector("i");
+
+            if (icon) {
+                icon.className = "fa-solid fa-bars";
+            }
+        }
+    }
+
+
+    if (menuToggle && headerRight) {
+
+        menuToggle.addEventListener("click", function () {
+
+            const isOpen =
+                headerRight.classList.toggle("mobile-open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation" : "Open navigation"
+            );
+
+            const icon = menuToggle.querySelector("i");
+
+            if (icon) {
+                icon.className = isOpen
+                    ? "fa-solid fa-xmark"
+                    : "fa-solid fa-bars";
+            }
+
+        });
+
+    }
+
+
+    // =====================================
+    // HOME DROPDOWN
+    // =====================================
+
+    function closeHomeDropdown() {
+
+        if (homeItem) {
+            homeItem.classList.remove("open");
+        }
+
+        if (homeToggle) {
+            homeToggle.setAttribute("aria-expanded", "false");
+        }
+    }
+
+
+    if (homeToggle && homeItem) {
+
+        homeToggle.addEventListener("click", function (event) {
+
+            event.stopPropagation();
+
+            const isOpen = homeItem.classList.toggle("open");
+
+            homeToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+        });
+
+    }
+
+
+    // Close dropdown when clicking outside.
+    document.addEventListener("click", function (event) {
+
+        if (homeItem && !homeItem.contains(event.target)) {
+            closeHomeDropdown();
+        }
+
+    });
+
+
+    // Close mobile menu after selecting a navigation link.
+    if (headerRight) {
+
+        headerRight.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+                closeMobileMenu();
+                closeHomeDropdown();
+            });
+
+        });
+
+    }
+
+
+    // Close menus with Escape.
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+            closeMobileMenu();
+            closeHomeDropdown();
+        }
+
+    });
+
+
+    // Close mobile menu when switching to desktop.
+    window.addEventListener("resize", function () {
+
+        if (window.innerWidth > 950) {
+            closeMobileMenu();
+        }
+
+    });
+
+
+    // =====================================
+    // AUTOMATIC COPYRIGHT YEAR
+    // =====================================
+
+    if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
+    }
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const revealElements = document.querySelectorAll(".service-reveal");
+
+    if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.12,
+                rootMargin: "0px 0px -35px 0px"
+            }
+        );
+
+        revealElements.forEach((element) => {
+            revealObserver.observe(element);
+        });
+    } else {
+        revealElements.forEach((element) => {
+            element.classList.add("is-visible");
+        });
+    }
+
+    const serviceCards = document.querySelectorAll(".service-card");
+
+    serviceCards.forEach((card) => {
+        card.addEventListener("pointermove", (event) => {
+            if (event.pointerType === "touch") return;
+
+            const rect = card.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            card.style.setProperty("--pointer-x", `${x}px`);
+            card.style.setProperty("--pointer-y", `${y}px`);
+        });
+    });
+
+    document.querySelectorAll('.wine-services a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+            const target = document.querySelector(link.getAttribute("href"));
+
+            if (target) {
+                event.preventDefault();
+                target.scrollIntoView({
+                    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+                        ? "auto"
+                        : "smooth",
+                    block: "start"
+                });
+            }
+        });
+    });
+});
+</script>
+    </body>
+</html>

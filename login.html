@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6B1D2A">
+    <title>Vine & Cask | Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+    <div class="gold-wave wave-one"></div>
+    <div class="gold-wave wave-two"></div>
+
+    <div class="floating-decoration decoration-one">✦</div>
+    <div class="floating-decoration decoration-two">✧</div>
+    <div class="floating-decoration decoration-three">✦</div>
+
+    <div class="top-controls">
+        <button class="control-button" id="rtlToggle" type="button" aria-label="Toggle right-to-left layout">RTL</button>
+        <button class="control-button" id="themeToggle" type="button" aria-label="Toggle dark mode">
+            <i class="fa-regular fa-moon"></i>
+        </button>
+    </div>
+
+    <main class="login-wrapper">
+        <section class="login-card">
+            <div class="card-shine"></div>
+
+            <a href="index.html" class="brand">
+                <div class="brand-emblem">
+                <img src="images/logo.png">
+                </div>
+                <div class="brand-name">Wine <span>&</span> Craft</div>
+                <div class="brand-tagline"> Discover. Sip. Savour.</div>
+            </a>
+
+            <div class="welcome-section">
+                <h1>Welcome Back</h1>
+                <p>Sign in to your cellar</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-envelope input-icon"></i>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            minlength="6"
+                            required
+                        >
+                        <button class="password-toggle" id="passwordToggle" type="button" aria-label="Show password">
+                            
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-option">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <span class="custom-checkbox"></span>
+                        <span>Remember Me</span>
+                    </label>
+
+                    <a href="#" class="text-link" id="forgotPassword">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="login-button">
+                    <span>Sign In</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="button-shine"></span>
+                </button>
+
+                <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="separator">
+                <span></span>
+                <p>OR</p>
+                <span></span>
+            </div>
+
+            <div class="social-login">
+                <button type="button" class="social-button" id="googleLogin">
+                    <i class="fa-brands fa-google google-icon"></i>
+                    <span>Continue with Google</span>
+                </button>
+
+                <button type="button" class="social-button" id="appleLogin">
+                    <i class="fa-brands fa-apple apple-icon"></i>
+                    <span>Continue with Apple</span>
+                </button>
+            </div>
+
+            <div class="signup-prompt">
+                <span>New to the cellar?</span>
+                <a href="sign.html">Create an Account <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="security-note">
+                <i class="fa-solid fa-shield-halved"></i>
+                Secure access to your collection
+            </div>
+        </section>
+    </main>
+
+    <script>
+
+    
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    const themeToggle = document.getElementById("themeToggle");
+    const rtlToggle = document.getElementById("rtlToggle");
+    const passwordToggle = document.getElementById("passwordToggle");
+    const passwordInput = document.getElementById("password");
+    const loginForm = document.getElementById("loginForm");
+    const formMessage = document.getElementById("formMessage");
+    const emailInput = document.getElementById("email");
+    const forgotPassword = document.getElementById("forgotPassword");
+
+    function showMessage(message, type) {
+        if (!formMessage) return;
+        formMessage.textContent = message;
+        formMessage.className = `form-message visible ${type}`;
+    }
+
+    function updateTheme() {
+        const isDark = body.classList.contains("dark-mode");
+
+        if (themeToggle) {
+            themeToggle.innerHTML = isDark
+                ? '<i class="fa-regular fa-sun"></i>'
+                : '<i class="fa-regular fa-moon"></i>';
+
+            themeToggle.setAttribute(
+                "aria-label",
+                isDark ? "Switch to light mode" : "Switch to dark mode"
+            );
+        }
+    }
+
+    function updateDirection() {
+        const isRTL = body.getAttribute("dir") === "rtl";
+
+        if (rtlToggle) {
+            rtlToggle.textContent = isRTL ? "LTR" : "RTL";
+        }
+
+        body.classList.toggle("rtl-mode", isRTL);
+    }
+
+    try {
+        if (localStorage.getItem("wineStoreTheme") === "dark") {
+            body.classList.add("dark-mode");
+        }
+
+        body.setAttribute(
+            "dir",
+            localStorage.getItem("wineStoreDirection") === "rtl"
+                ? "rtl"
+                : "ltr"
+        );
+    } catch (error) {
+        body.setAttribute("dir", "ltr");
+    }
+
+    updateTheme();
+    updateDirection();
+
+    themeToggle?.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        try {
+            localStorage.setItem(
+                "wineStoreTheme",
+                body.classList.contains("dark-mode") ? "dark" : "light"
+            );
+        } catch (error) {}
+
+        updateTheme();
+    });
+
+    rtlToggle?.addEventListener("click", () => {
+        const newDirection =
+            body.getAttribute("dir") === "rtl" ? "ltr" : "rtl";
+
+        body.setAttribute("dir", newDirection);
+
+        try {
+            localStorage.setItem("wineStoreDirection", newDirection);
+        } catch (error) {}
+
+        updateDirection();
+    });
+
+    passwordToggle?.addEventListener("click", () => {
+        if (!passwordInput) return;
+
+        const showPassword = passwordInput.type === "password";
+        passwordInput.type = showPassword ? "text" : "password";
+
+        passwordToggle.innerHTML = showPassword
+            ? '<i class="fa-regular fa-eye-slash"></i>'
+            : '<i class="fa-regular fa-eye"></i>';
+
+        passwordToggle.setAttribute(
+            "aria-label",
+            showPassword ? "Hide password" : "Show password"
+        );
+    });
+
+    loginForm?.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (!loginForm.checkValidity()) {
+            loginForm.reportValidity();
+            return;
+        }
+
+        showMessage(
+            "Form validated. Connect your authentication backend to sign in.",
+            "success"
+        );
+    });
+
+    forgotPassword?.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        if (!emailInput || !emailInput.value.trim() || !emailInput.checkValidity()) {
+            showMessage("Please enter a valid email address first.", "error");
+            emailInput?.focus();
+            return;
+        }
+
+        showMessage(
+            "Connect your password recovery service to reset your password.",
+            "success"
+        );
+    });
+
+    document.getElementById("googleLogin")?.addEventListener("click", () => {
+        showMessage("Google sign-in requires Google OAuth configuration.", "error");
+    });
+
+    document.getElementById("appleLogin")?.addEventListener("click", () => {
+        showMessage("Apple sign-in requires Apple authentication configuration.", "error");
+    });
+});
+</script>
+</body>
+</html>

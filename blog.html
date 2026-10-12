@@ -1,0 +1,1528 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6B1D2A">
+    <title>Journal | Wine & Craft Spirits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+
+                <img src="images/logo.png"
+                     alt="Wine & Craft Spirits Store Logo"
+                     class="logo-image">
+
+                <span class="brand-details">
+
+                    <span class="brand-name">
+                        <span class="brand-wine">Wine</span>
+                        <span class="brand-amp">&</span>
+                        <span class="brand-craft">Craft</span>
+                    </span>
+
+                    <span class="brand-tagline">
+                        Discover. Sip. Savour.
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open navigation"
+                    aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+           
+            <div class="header-right" id="headerRight">
+
+                <nav class="main-nav" aria-label="Main navigation">
+
+                    <ul class="nav-list">
+
+                        
+                        <li class="nav-item home-item">
+
+                            <button class="nav-link dropdown-toggle"
+                                    id="homeToggle"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                Home
+                                <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+
+                            </button>
+
+                            <ul class="dropdown-menu" id="homeMenu">
+
+                                <li>
+                                    <a href="index.html">Home 1</a>
+                                </li>
+
+                                <li>
+                                    <a href="home-2.html">Home 2</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About Us</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="service.html" class="nav-link">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link active">Blog</a>
+                        </li>
+
+                        
+
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+
+                
+                <div class="header-actions">
+
+                    <button class="control-btn"
+                            id="directionBtn"
+                            type="button"
+                            aria-label="Switch to right-to-left layout">
+
+                        <i class="fa-solid fa-right-left"></i>
+                        <span id="directionText">RTL</span>
+
+                    </button>
+
+                    <button class="control-btn"
+                            id="themeBtn"
+                            type="button"
+                            aria-label="Switch to dark mode">
+
+                        <i class="fa-solid fa-moon" id="themeIcon"></i>
+                        <span id="themeText">Dark</span>
+
+                    </button>
+                    
+
+                    <a href="login.html" class="login-btn">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Login</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    
+
+
+<style>
+.decorative-image,
+.category-image,
+.article-image,
+.knowledge-image,
+.spirit-image,
+.cta-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.art-glass {
+    overflow: hidden;
+}
+
+.art-glass .decorative-image {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: contain;
+}
+
+.category-icon {
+    display: block;
+    overflow: hidden;
+    padding: 0;
+}
+
+.category-icon .category-image {
+    border-radius: inherit;
+    transition: transform 0.4s ease;
+}
+
+.category-card:hover .category-image {
+    transform: scale(1.08);
+}
+
+.article-art {
+    position: relative;
+    overflow: hidden;
+}
+
+.article-art .article-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    transition: transform 0.5s ease;
+}
+
+.article-card:hover .article-image {
+    transform: scale(1.06);
+}
+
+.article-art::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.08),
+        rgba(0, 0, 0, 0.48)
+    );
+    pointer-events: none;
+}
+
+.article-art .art-top-label,
+.article-art .art-bottom-number {
+    position: relative;
+    z-index: 2;
+}
+
+.knowledge-center {
+    overflow: hidden;
+}
+
+.knowledge-center .knowledge-image {
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+.spirit-icon {
+    overflow: hidden;
+}
+
+.spirit-icon .spirit-image {
+    border-radius: inherit;
+    transition: transform 0.4s ease;
+}
+
+.spirit-card:hover .spirit-image {
+    transform: scale(1.07);
+}
+
+.cta-mark {
+    overflow: hidden;
+}
+
+.cta-mark .cta-image {
+    border-radius: inherit;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .category-image,
+    .article-image {
+        object-position: center;
+    }
+}
+</style>
+</head>
+
+
+
+<main class="wine-blog">
+
+    <section class="blog-hero">
+        <div class="hero-decoration hero-decoration-one"></div>
+        <div class="hero-decoration hero-decoration-two"></div>
+
+        <div class="hero-content">
+
+            <div class="green-label">
+                <span class="green-line"></span>
+                <span class="green-text">THE WINE & SPIRITS JOURNAL</span>
+            </div>
+
+            <h1 class="reveal">
+                Good Taste.<br>
+                <span>Great Stories.</span>
+            </h1>
+
+            <p class="reveal">
+                Explore the world of fine wines, handcrafted spirits,
+                thoughtful pairings, and the people behind every remarkable pour.
+            </p>
+
+            <a href="#latest" class="wine-button">
+                Explore the Journal
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <div class="hero-note reveal">
+                <span></span>
+                A little knowledge makes every pour better.
+            </div>
+        </div>
+
+        <div class="hero-side-text">POUR · TASTE · DISCOVER</div>
+    </section>
+
+    
+    <section class="featured-section section-space">
+
+        <div class="section-heading reveal">
+            <div>
+                <span class="eyebrow">EDITOR'S PICK</span>
+                <h2>Worth <span>Savoring</span></h2>
+            </div>
+            <span class="heading-note">A story for your next glass.</span>
+        </div>
+
+        <article class="featured-card reveal">
+
+            <div class="featured-art">
+                <div class="art-circle"></div>
+
+                <div class="art-glass">
+                    <img src="images/15.jpg"
+                         alt="A glass of fine red wine"
+                         class="decorative-image">
+                </div>
+
+                <span class="art-label">THE ART OF WINE</span>
+                <span class="art-number">01</span>
+            </div>
+
+            <div class="featured-content">
+
+                <div class="green-label">
+                    <span class="green-line"></span>
+                    <span class="green-text">THE WINE & SPIRITS JOURNAL</span>
+                </div>
+
+                <h3>
+                    From Grape to Glass: Understanding the Journey of Fine Wine
+                </h3>
+
+                <p>
+                    Discover how vineyard conditions, grape varieties,
+                    fermentation, and aging come together to create the
+                    character in every bottle.
+                </p>
+
+                <div class="article-meta">
+                    <span><i class="fa-regular fa-calendar"></i> 8 min read</span>
+                    <span><i class="fa-regular fa-bookmark"></i> Beginner Friendly</span>
+                </div>
+
+                <a href="#wine-basics" class="text-link">
+                    Discover the story
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+    </section>
+
+    
+    <section class="categories-section section-space">
+
+        <div class="section-heading reveal">
+            <div>
+                <div class="green-label">
+                    <span class="green-line"></span>
+                    <span class="green-text">FIND YOUR INTEREST</span>
+                </div>
+
+                <h2>Explore by <span>Category</span></h2>
+            </div>
+        </div>
+
+        <div class="category-grid">
+
+            <button class="category-card reveal" data-category="wine">
+
+                <span class="category-icon">
+                    <img src="images/16.jpg"
+                         alt="Wine and spirits collection"
+                         class="category-image">
+                </span>
+
+                <h3>Everything</h3>
+                <p>Explore every story</p>
+
+                <span class="category-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </button>
+
+            <button class="category-card reveal" data-category="wine">
+
+                <span class="category-icon">
+                    <img src="images/17.jpg"
+                         alt="Red wine in a glass"
+                         class="category-image">
+                </span>
+
+                <h3>Wine Notes</h3>
+                <p>Regions, grapes and vintages</p>
+
+                <span class="category-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </button>
+
+            <button class="category-card reveal" data-category="spirits">
+
+                <span class="category-icon">
+                    <img src="images/18.jpg"
+                         alt="Craft spirits bottle"
+                         class="category-image">
+                </span>
+
+                <h3>Craft Spirits</h3>
+                <p>Whisky, gin and more</p>
+
+                <span class="category-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </button>
+
+            <button class="category-card reveal" data-category="pairing">
+
+                <span class="category-icon">
+                    <img src="images/7.jpg"
+                         alt="Food and wine pairing"
+                         class="category-image">
+                </span>
+
+                <h3>Food Pairings</h3>
+                <p>Bring flavors together</p>
+
+                <span class="category-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </button>
+
+        </div>
+    </section>
+
+    
+    <section class="latest-section section-space" id="latest">
+
+        <div class="section-heading reveal">
+            <div>
+                <div class="green-label">
+                    <span class="green-line"></span>
+                    <span class="green-text">FRESH FROM JOURNAL</span>
+                </div>
+
+                <h2>Stories to <span>Explore</span></h2>
+            </div>
+
+            <span class="heading-note">
+                Curiosity pairs well with everything.
+            </span>
+        </div>
+
+        <div class="blog-tools reveal">
+            <label class="blog-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search"
+                       id="blogSearch"
+                       placeholder="Search articles..."
+                       aria-label="Search articles">
+            </label>
+
+            <span class="result-count" id="resultCount">6 stories</span>
+        </div>
+
+        <div class="article-grid" id="articleGrid">
+
+            <article class="article-card reveal"
+                     data-category="wine"
+                     data-title="red wine for beginners">
+
+                <div class="article-art art-wine">
+                    <span class="art-top-label">WINE NOTES</span>
+
+                    <img src="images/19.jpg"
+                         alt="Red wine for beginners"
+                         class="article-image">
+
+                    <span class="art-bottom-number">01</span>
+                </div>
+
+                <div class="article-body">
+                    <span class="article-category">WINE</span>
+                    <h3>Red Wine for Beginners: Where to Start</h3>
+
+                    <p>
+                        Get to know popular red wine styles, understand their
+                        flavor profiles, and find a bottle that suits your palate.
+                    </p>
+
+                    <div class="article-footer">
+                        <span>6 min read</span>
+                        <a href="b1.html"
+                           aria-label="Read Red Wine for Beginners">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card reveal"
+                     data-category="spirits"
+                     data-title="whisky bourbon scotch">
+
+                <div class="article-art art-whisky">
+                    <span class="art-top-label">SPIRIT SCHOOL</span>
+
+                    <img src="images/20.jpg"
+                         alt="Whisky in a glass"
+                         class="article-image">
+
+                    <span class="art-bottom-number">02</span>
+                </div>
+
+                <div class="article-body">
+                    <span class="article-category">CRAFT SPIRITS</span>
+                    <h3>Whisky, Bourbon and Scotch Explained</h3>
+
+                    <p>
+                        Learn the essential differences in ingredients,
+                        origins, production, and flavor between these familiar spirits.
+                    </p>
+
+                    <div class="article-footer">
+                        <span>7 min read</span>
+                        <a href="b1.html"
+                           aria-label="Read Whisky, Bourbon and Scotch Explained">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card reveal"
+                     data-category="pairing"
+                     data-title="wine cheese pairing">
+
+                <div class="article-art art-pairing">
+                    <span class="art-top-label">AT THE TABLE</span>
+
+                    <img src="images/21.jpg"
+                         alt="Wine and cheese pairing"
+                         class="article-image">
+
+                    <span class="art-bottom-number">03</span>
+                </div>
+
+                <div class="article-body">
+                    <span class="article-category">FOOD PAIRINGS</span>
+                    <h3>A Simple Guide to Wine and Cheese Pairing</h3>
+
+                    <p>
+                        Discover approachable combinations that balance
+                        sweetness, acidity, texture, and richness.
+                    </p>
+
+                    <div class="article-footer">
+                        <span>5 min read</span>
+                        <a href=b1.html"
+                           aria-label="Read Wine and Cheese Pairing">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card reveal"
+                     data-category="wine"
+                     data-title="wine tasting aroma notes">
+
+                <div class="article-art art-tasting">
+                    <span class="art-top-label">TASTE BETTER</span>
+
+                    <img src="images/22.jpg"
+                         alt="Wine tasting"
+                         class="article-image">
+
+                    <span class="art-bottom-number">04</span>
+                </div>
+
+                <div class="article-body">
+                    <span class="article-category">WINE</span>
+                    <h3>How to Taste Wine and Notice More</h3>
+
+                    <p>
+                        Use sight, aroma, taste, and finish to explore
+                        a wine's character without needing to be an expert.
+                    </p>
+
+                    <div class="article-footer">
+                        <span>4 min read</span>
+                        <a href="b1.html" aria-label="Read How to Taste Wine">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card reveal"
+                     data-category="spirits"
+                     data-title="craft gin botanicals">
+
+                <div class="article-art art-gin">
+                    <span class="art-top-label">BOTANICAL WORLD</span>
+
+                    <img src="images/23.jpg"
+                         alt="Craft gin and botanicals"
+                         class="article-image">
+
+                    <span class="art-bottom-number">05</span>
+                </div>
+
+                <div class="article-body">
+                    <span class="article-category">CRAFT SPIRITS</span>
+                    <h3>Inside the Botanical World of Craft Gin</h3>
+
+                    <p>
+                        Explore how juniper, citrus peel, herbs, and spices
+                        help give different gins their distinctive personalities.
+                    </p>
+
+                    <div class="article-footer">
+                        <span>6 min read</span>
+                        <a href="b1.html" aria-label="Read Craft Gin">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card reveal"
+                     data-category="pairing"
+                     data-title="hosting dinner party drinks">
+
+                <div class="article-art art-hosting">
+                    <span class="art-top-label">HOST WITH STYLE</span>
+
+                    <img src="images/24.jpg"
+                         alt="Dinner party drinks"
+                         class="article-image">
+
+                    <span class="art-bottom-number">06</span>
+                </div>
+
+                <div class="article-body">
+                    <span class="article-category">ENTERTAINING</span>
+                    <h3>Planning a Dinner Party Drinks Menu</h3>
+
+                    <p>
+                        Build a thoughtful drinks selection that complements
+                        the meal and makes guests feel welcome.
+                    </p>
+
+                    <div class="article-footer">
+                        <span>5 min read</span>
+                        <a href="b1.html" aria-label="Read Dinner Party Drinks">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="empty-state" id="emptyState" hidden>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>No stories found</h3>
+            <p>Try another search term or choose a different category.</p>
+            <button class="wine-button" id="resetSearch">
+                Show all stories
+            </button>
+        </div>
+
+    </section>
+
+    <section class="knowledge-section section-space" id="wine-basics">
+
+        <div class="knowledge-content reveal">
+
+            <div class="green-label">
+                <span class="green-line"></span>
+                <span class="green-text">THE ART OF APPRECIATION</span>
+            </div>
+
+            <h2>Every Bottle Has a <span>Story.</span></h2>
+
+            <p>
+                From the first swirl to the final note, understanding what is
+                in your glass can turn an ordinary moment into a memorable experience.
+            </p>
+
+            <div class="knowledge-points">
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Understand grape varieties and styles</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Discover aroma, flavor, and finish</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Serve and store bottles with care</span>
+                </div>
+            </div>
+
+            <a href="#latest" class="text-link">
+                Explore wine stories
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="knowledge-art reveal">
+            <div class="knowledge-ring ring-one"></div>
+            <div class="knowledge-ring ring-two"></div>
+
+            <div class="knowledge-center">
+                <img src="images/13.jpg"
+                     alt="Fine wine glass"
+                     class="knowledge-image">
+            </div>
+
+            <span class="knowledge-caption">A WORLD OF FLAVOR</span>
+            <span class="knowledge-small">DISCOVER · LEARN · ENJOY</span>
+        </div>
+
+    </section>
+
+    <section class="spirits-section section-space" id="spirits-guide">
+
+        <div class="section-heading reveal">
+            <div>
+                <div class="green-label">
+                    <span class="green-line"></span>
+                    <span class="green-text">BEYOND THE WINE YARD</span>
+                </div>
+
+                <h2>The Craft of <span>Spirits</span></h2>
+            </div>
+
+            <span class="heading-note">Tradition meets imagination.</span>
+        </div>
+
+        <div class="spirit-grid">
+
+            <article class="spirit-card reveal">
+                <span class="spirit-number">01 / WHISKY</span>
+
+                <div class="spirit-icon">
+                    <img src="images/4.jpg"
+                         alt="Whisky glass"
+                         class="spirit-image">
+                </div>
+
+                <h3>Time & Oak</h3>
+                <p>
+                    Explore how grains, distillation, and barrel aging
+                    shape a whisky's character.
+                </p>
+
+                <a href="#latest" class="text-link">
+                    Read the journal
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </article>
+
+            <article class="spirit-card reveal">
+                <span class="spirit-number">02 / GIN</span>
+
+                <div class="spirit-icon">
+                    <img src="images/18.jpg"
+                         alt="Gin botanicals"
+                         class="spirit-image">
+                </div>
+
+                <h3>Botanical Notes</h3>
+                <p>
+                    Discover the fragrant ingredients and creative
+                    methods behind craft gin.
+                </p>
+
+                <a href="#latest" class="text-link">
+                    Read the journal
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </article>
+
+            <article class="spirit-card reveal">
+                <span class="spirit-number">03 / RUM</span>
+
+                <div class="spirit-icon">
+                    <img src="images/16.jpg"
+                         alt="Rum bottle"
+                         class="spirit-image">
+                </div>
+
+                <h3>Island Character</h3>
+                <p>
+                    Learn how molasses, sugarcane, and regional
+                    traditions influence rum styles.
+                </p>
+
+                <a href="#latest" class="text-link">
+                    Read the journal
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="pairing-cta section-space" id="pairing-guide">
+
+        <div class="cta-decoration"></div>
+
+        <div class="cta-content reveal">
+            <h2>Find Your Next <span>Favorite.</span></h2>
+
+            <p>
+                Explore thoughtful pairings, discover new flavors,
+                and make every gathering feel special.
+            </p>
+
+            <a href="#latest" class="wine-button">
+                Discover More Stories
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="cta-mark">
+            <img src="images/14.jpg"
+                 alt="Wine glass"
+                 class="cta-image">
+        </div>
+
+    </section>
+
+</main>
+<footer class="site-footer">
+
+        <div class="footer-container">
+
+           
+            <div class="footer-brand">
+
+                <a href="index.html" class="brand footer-logo">
+
+                    <img src="images/logo.png"
+                         alt="Wine & Craft Spirits Store Logo"
+                         class="logo-image">
+
+                    <span class="brand-details">
+
+                        <span class="brand-name">
+                            <span class="brand-wine">Wine</span>
+                            <span class="brand-amp">&</span>
+                            <span class="brand-craft">Craft</span>
+                        </span>
+
+                        <span class="brand-tagline">
+                            Discover. Sip. Savour.
+                        </span>
+
+                    </span>
+
+                </a>
+
+                <p class="footer-description">
+                    Discover a thoughtfully curated collection of wines
+                    and craft spirits for every occasion.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+                     <a href="#" aria-label="Google">
+                       <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                   
+                </ul>
+
+            </div>
+
+
+           
+            <div class="footer-column">
+
+                <h3>Customer Care</h3>
+
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="shipping.html">Shipping Information</a></li>
+                    <li><a href="returns.html">Returns Policy</a></li>
+                </ul>
+
+            </div>
+
+
+           
+            <div class="footer-column footer-contact">
+
+                <h3>Contact Us</h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Your Store Address, Your City</span>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+910000000000">+91 00000 00000</a>
+                </p>
+
+                <p>
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:hello@wineandcraft.com">
+                        hello@wineandcraft.com
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        
+        <div class="footer-bottom">
+
+            <p>
+                &copy; <span id="currentYear"></span>
+                <span class="copyright-name">Wine & Craft Spirits Store</span>.
+                All rights reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+<script>
+    
+document.addEventListener("DOMContentLoaded", function () {
+
+    const html = document.documentElement;
+    const body = document.body;
+
+    const themeBtn = document.getElementById("themeBtn");
+    const themeIcon = document.getElementById("themeIcon");
+    const themeText = document.getElementById("themeText");
+
+    const directionBtn = document.getElementById("directionBtn");
+    const directionText = document.getElementById("directionText");
+
+    const menuToggle = document.getElementById("menuToggle");
+    const headerRight = document.getElementById("headerRight");
+
+    const homeToggle = document.getElementById("homeToggle");
+    const homeItem = document.querySelector(".home-item");
+
+    const currentYear = document.getElementById("currentYear");
+
+
+   
+
+    function applyTheme(theme) {
+
+        const isDark = theme === "dark";
+
+        body.classList.toggle("dark-mode", isDark);
+
+        if (themeIcon) {
+            themeIcon.className = isDark
+                ? "fa-solid fa-sun"
+                : "fa-solid fa-moon";
+        }
+
+        if (themeText) {
+            themeText.textContent = isDark ? "Light" : "Dark";
+        }
+
+        if (themeBtn) {
+            themeBtn.setAttribute(
+                "aria-label",
+                isDark ? "Switch to light mode" : "Switch to dark mode"
+            );
+
+            themeBtn.setAttribute("aria-pressed", String(isDark));
+        }
+    }
+
+
+    let savedTheme = "light";
+
+    try {
+        savedTheme = localStorage.getItem("wineCraftTheme") || "light";
+    } catch (error) {
+        savedTheme = "light";
+    }
+
+    applyTheme(savedTheme);
+
+
+    if (themeBtn) {
+
+        themeBtn.addEventListener("click", function () {
+
+            const newTheme = body.classList.contains("dark-mode")
+                ? "light"
+                : "dark";
+
+            applyTheme(newTheme);
+
+            try {
+                localStorage.setItem("wineCraftTheme", newTheme);
+            } catch (error) {
+                // The theme still works without local storage.
+            }
+
+        });
+
+    }
+
+
+    
+    function applyDirection(direction) {
+
+        html.setAttribute("dir", direction);
+
+        if (directionText) {
+            directionText.textContent =
+                direction === "rtl" ? "LTR" : "RTL";
+        }
+
+        if (directionBtn) {
+            directionBtn.setAttribute(
+                "aria-label",
+                direction === "rtl"
+                    ? "Switch to left-to-right layout"
+                    : "Switch to right-to-left layout"
+            );
+
+            directionBtn.setAttribute(
+                "aria-pressed",
+                String(direction === "rtl")
+            );
+        }
+    }
+
+
+    let savedDirection = "ltr";
+
+    try {
+        savedDirection = localStorage.getItem("wineCraftDirection") || "ltr";
+    } catch (error) {
+        savedDirection = "ltr";
+    }
+
+    applyDirection(savedDirection);
+
+
+    if (directionBtn) {
+
+        directionBtn.addEventListener("click", function () {
+
+            const newDirection =
+                html.getAttribute("dir") === "rtl" ? "ltr" : "rtl";
+
+            applyDirection(newDirection);
+
+            try {
+                localStorage.setItem("wineCraftDirection", newDirection);
+            } catch (error) {
+                // Direction still works without local storage.
+            }
+
+        });
+
+    }
+
+
+    
+    function closeMobileMenu() {
+
+        if (headerRight) {
+            headerRight.classList.remove("mobile-open");
+        }
+
+        if (menuToggle) {
+
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation");
+
+            const icon = menuToggle.querySelector("i");
+
+            if (icon) {
+                icon.className = "fa-solid fa-bars";
+            }
+        }
+    }
+
+
+    if (menuToggle && headerRight) {
+
+        menuToggle.addEventListener("click", function () {
+
+            const isOpen =
+                headerRight.classList.toggle("mobile-open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation" : "Open navigation"
+            );
+
+            const icon = menuToggle.querySelector("i");
+
+            if (icon) {
+                icon.className = isOpen
+                    ? "fa-solid fa-xmark"
+                    : "fa-solid fa-bars";
+            }
+
+        });
+
+    }
+
+
+   
+
+    function closeHomeDropdown() {
+
+        if (homeItem) {
+            homeItem.classList.remove("open");
+        }
+
+        if (homeToggle) {
+            homeToggle.setAttribute("aria-expanded", "false");
+        }
+    }
+
+
+    if (homeToggle && homeItem) {
+
+        homeToggle.addEventListener("click", function (event) {
+
+            event.stopPropagation();
+
+            const isOpen = homeItem.classList.toggle("open");
+
+            homeToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+        });
+
+    }
+
+
+    document.addEventListener("click", function (event) {
+
+        if (homeItem && !homeItem.contains(event.target)) {
+            closeHomeDropdown();
+        }
+
+    });
+
+
+    if (headerRight) {
+
+        headerRight.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+                closeMobileMenu();
+                closeHomeDropdown();
+            });
+
+        });
+
+    }
+
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+            closeMobileMenu();
+            closeHomeDropdown();
+        }
+
+    });
+
+
+    window.addEventListener("resize", function () {
+
+        if (window.innerWidth > 950) {
+            closeMobileMenu();
+        }
+
+    });
+
+
+    
+
+    if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
+    }
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const searchInput = document.getElementById("blogSearch");
+    const articleGrid = document.getElementById("articleGrid");
+    const articles = Array.from(
+        articleGrid.querySelectorAll(".article-card")
+    );
+
+    const categoryButtons = document.querySelectorAll(".category-card");
+    const resultCount = document.getElementById("resultCount");
+    const emptyState = document.getElementById("emptyState");
+    const resetButton = document.getElementById("resetSearch");
+
+    let activeCategory = "all";
+    let searchTerm = "";
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+            (entries, currentObserver) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        currentObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.12,
+                rootMargin: "0px 0px -35px 0px"
+            }
+        );
+
+        revealElements.forEach(element => observer.observe(element));
+    } else {
+        revealElements.forEach(element => {
+            element.classList.add("visible");
+        });
+    }
+
+    function filterArticles() {
+        let visibleCount = 0;
+
+        articles.forEach(article => {
+            const category = article.dataset.category;
+            const title = article.dataset.title || "";
+            const text = article.textContent.toLowerCase();
+
+            const matchesCategory =
+                activeCategory === "all" ||
+                category === activeCategory;
+
+            const matchesSearch =
+                title.toLowerCase().includes(searchTerm) ||
+                text.includes(searchTerm);
+
+            const isVisible = matchesCategory && matchesSearch;
+
+            article.hidden = !isVisible;
+
+            if (isVisible) {
+                visibleCount++;
+                article.classList.remove("visible");
+                void article.offsetWidth;
+                article.classList.add("visible");
+            }
+        });
+
+        resultCount.textContent =
+            `${visibleCount} ${visibleCount === 1 ? "story" : "stories"}`;
+
+        emptyState.hidden = visibleCount !== 0;
+    }
+
+    categoryButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            activeCategory = button.dataset.category;
+
+            categoryButtons.forEach(categoryButton => {
+                const isActive = categoryButton === button;
+
+                categoryButton.classList.toggle(
+                    "active-category",
+                    isActive
+                );
+
+                categoryButton.setAttribute(
+                    "aria-pressed",
+                    String(isActive)
+                );
+            });
+
+            filterArticles();
+        });
+
+        button.setAttribute(
+            "aria-pressed",
+            String(button.classList.contains("active-category"))
+        );
+    });
+
+    searchInput.addEventListener("input", event => {
+        searchTerm = event.target.value.trim().toLowerCase();
+        filterArticles();
+    });
+
+    resetButton.addEventListener("click", () => {
+        activeCategory = "all";
+        searchTerm = "";
+        searchInput.value = "";
+
+        categoryButtons.forEach(button => {
+            const isActive = button.dataset.category === "all";
+
+            button.classList.toggle("active-category", isActive);
+
+            button.setAttribute(
+                "aria-pressed",
+                String(isActive)
+            );
+        });
+
+        filterArticles();
+        searchInput.focus();
+    });
+
+    filterArticles();
+});
+</script>
+
+</body>
+</html>
+
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const revealElements = document.querySelectorAll(".team-reveal");
+
+    if (!("IntersectionObserver" in window)) {
+        revealElements.forEach(function (element) {
+            element.classList.add("is-visible");
+        });
+        return;
+    }
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12
+    });
+
+    revealElements.forEach(function (element) {
+        observer.observe(element);
+    });
+});
+
+        
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("blogSearch");
+    const articleGrid = document.getElementById("articleGrid");
+    const articles = Array.from(articleGrid.querySelectorAll(".article-card"));
+    const categoryButtons = document.querySelectorAll(".category-card");
+    const resultCount = document.getElementById("resultCount");
+    const emptyState = document.getElementById("emptyState");
+    const resetButton = document.getElementById("resetSearch");
+
+    let activeCategory = "all";
+    let searchTerm = "";
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries, currentObserver) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    currentObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: "0px 0px -35px 0px"
+        });
+
+        revealElements.forEach(element => observer.observe(element));
+    } else {
+        revealElements.forEach(element => element.classList.add("visible"));
+    }
+
+    function filterArticles() {
+        let visibleCount = 0;
+
+        articles.forEach(article => {
+            const category = article.dataset.category;
+            const title = article.dataset.title || "";
+            const text = article.textContent.toLowerCase();
+
+            const matchesCategory =
+                activeCategory === "all" || category === activeCategory;
+
+            const matchesSearch =
+                title.toLowerCase().includes(searchTerm) ||
+                text.includes(searchTerm);
+
+            const isVisible = matchesCategory && matchesSearch;
+
+            article.hidden = !isVisible;
+
+            if (isVisible) {
+                visibleCount++;
+                article.classList.remove("visible");
+                void article.offsetWidth;
+                article.classList.add("visible");
+            }
+        });
+
+        resultCount.textContent =
+            `${visibleCount} ${visibleCount === 1 ? "story" : "stories"}`;
+
+        emptyState.hidden = visibleCount !== 0;
+    }
+
+    categoryButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            activeCategory = button.dataset.category;
+
+            categoryButtons.forEach(categoryButton => {
+                const isActive = categoryButton === button;
+                categoryButton.classList.toggle("active-category", isActive);
+                categoryButton.setAttribute("aria-pressed", String(isActive));
+            });
+
+            filterArticles();
+        });
+
+        button.setAttribute(
+            "aria-pressed",
+            String(button.classList.contains("active-category"))
+        );
+    });
+
+    searchInput.addEventListener("input", event => {
+        searchTerm = event.target.value.trim().toLowerCase();
+        filterArticles();
+    });
+
+    resetButton.addEventListener("click", () => {
+        activeCategory = "all";
+        searchTerm = "";
+        searchInput.value = "";
+
+        categoryButtons.forEach(button => {
+            const isActive = button.dataset.category === "all";
+            button.classList.toggle("active-category", isActive);
+            button.setAttribute("aria-pressed", String(isActive));
+        });
+
+        filterArticles();
+        searchInput.focus();
+    });
+
+    filterArticles();
+});
+
+    </script>
+</body>
+</html>

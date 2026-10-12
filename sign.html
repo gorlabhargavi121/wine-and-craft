@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6B1D2A">
+    <title>Vine & Cask | Create Account</title>
+    <link rel="stylesheet" href="sign.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+    <div class="gold-wave wave-one"></div>
+    <div class="gold-wave wave-two"></div>
+
+    <div class="floating-decoration decoration-one">✦</div>
+    <div class="floating-decoration decoration-two">✧</div>
+    <div class="floating-decoration decoration-three">✦</div>
+
+    <div class="top-controls">
+        <button class="control-button" id="rtlToggle" type="button" aria-label="Toggle text direction">RTL</button>
+        <button class="control-button" id="themeToggle" type="button" aria-label="Toggle dark mode">
+            <i class="fa-regular fa-moon"></i>
+        </button>
+    </div>
+
+    <main class="signup-wrapper">
+        <section class="signup-card">
+            <div class="card-shine"></div>
+
+            <a href="index.html" class="brand">
+                <div class="brand-emblem">
+                    <img src="images/logo.png">
+                </div>
+                <div class="brand-name">Wine <span>&</span> Craft</div>
+                <div class="brand-tagline">Fine Wines. Rare Spirits.</div>
+            </a>
+
+            <div class="welcome-section">
+                <h1>Create Account</h1>
+                <p>Join our world of exceptional wines and spirits</p>
+            </div>
+
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-user input-icon"></i>
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            minlength="2"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-envelope input-icon"></i>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required
+                        >
+                        <button class="password-toggle" type="button" data-password="password" aria-label="Show password">
+                        </button>
+                    </div>
+                    
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-shield-halved input-icon"></i>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required
+                        >
+                        <button class="password-toggle" type="button" data-password="confirmPassword" aria-label="Show confirmation password">
+                        </button>
+                    </div>
+                </div>
+
+                <label class="terms-option">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <span class="custom-checkbox"></span>
+                    <span>I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</span>
+                </label>
+
+                <button type="submit" class="signup-button">
+                    <span>Create Account</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="button-shine"></span>
+                </button>
+
+                <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="separator">
+                <span></span>
+                <p>OR</p>
+                <span></span>
+            </div>
+
+            <div class="social-login">
+                <button type="button" class="social-button" id="googleSignup">
+                    <i class="fa-brands fa-google google-icon"></i>
+                    <span>Sign up with Google</span>
+                </button>
+
+                <button type="button" class="social-button" id="appleSignup">
+                    <i class="fa-brands fa-apple apple-icon"></i>
+                    <span>Sign up with Apple</span>
+                </button>
+            </div>
+
+            <div class="login-prompt">
+                <span>Already have an account?</span>
+                <a href="login.html">Sign In <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="security-note">
+                <i class="fa-solid fa-shield-halved"></i>
+                Your information deserves the finest protection
+            </div>
+        </section>
+    </main>
+
+    <script>
+        
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    const themeToggle = document.getElementById("themeToggle");
+    const rtlToggle = document.getElementById("rtlToggle");
+    const signupForm = document.getElementById("signupForm");
+    const fullName = document.getElementById("fullName");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+    const terms = document.getElementById("terms");
+    const formMessage = document.getElementById("formMessage");
+    const passwordStrength = document.getElementById("passwordStrength");
+    const passwordHint = document.getElementById("passwordHint");
+
+    function showMessage(message, type) {
+        formMessage.textContent = message;
+        formMessage.className = `form-message visible ${type}`;
+    }
+
+    function updateTheme() {
+        const isDark = body.classList.contains("dark-mode");
+
+        themeToggle.innerHTML = isDark
+            ? '<i class="fa-regular fa-sun"></i>'
+            : '<i class="fa-regular fa-moon"></i>';
+
+        themeToggle.setAttribute(
+            "aria-label",
+            isDark ? "Switch to light mode" : "Switch to dark mode"
+        );
+    }
+
+    function updateDirection() {
+        const isRTL = body.getAttribute("dir") === "rtl";
+
+        rtlToggle.textContent = isRTL ? "LTR" : "RTL";
+        body.classList.toggle("rtl-mode", isRTL);
+    }
+
+    try {
+        body.classList.toggle(
+            "dark-mode",
+            localStorage.getItem("wineStoreTheme") === "dark"
+        );
+
+        body.setAttribute(
+            "dir",
+            localStorage.getItem("wineStoreDirection") === "rtl"
+                ? "rtl"
+                : "ltr"
+        );
+    } catch (error) {
+        body.setAttribute("dir", "ltr");
+    }
+
+    updateTheme();
+    updateDirection();
+
+    themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        try {
+            localStorage.setItem(
+                "wineStoreTheme",
+                body.classList.contains("dark-mode") ? "dark" : "light"
+            );
+        } catch (error) {}
+
+        updateTheme();
+    });
+
+    rtlToggle.addEventListener("click", () => {
+        const direction =
+            body.getAttribute("dir") === "rtl" ? "ltr" : "rtl";
+
+        body.setAttribute("dir", direction);
+
+        try {
+            localStorage.setItem("wineStoreDirection", direction);
+        } catch (error) {}
+
+        updateDirection();
+    });
+
+    document.querySelectorAll(".password-toggle").forEach((button) => {
+        button.addEventListener("click", () => {
+            const input = document.getElementById(button.dataset.password);
+            if (!input) return;
+
+            const showPassword = input.type === "password";
+            input.type = showPassword ? "text" : "password";
+
+            button.innerHTML = showPassword
+                ? '<i class="fa-regular fa-eye-slash"></i>'
+                : '<i class="fa-regular fa-eye"></i>';
+
+            button.setAttribute(
+                "aria-label",
+                showPassword ? "Hide password" : "Show password"
+            );
+        });
+    });
+
+    function updatePasswordStrength() {
+        const value = password.value;
+        let score = 0;
+
+        if (value.length >= 8) score++;
+        if (/[a-z]/.test(value) && /[A-Z]/.test(value)) score++;
+        if (/\d/.test(value)) score++;
+        if (/[^a-zA-Z0-9]/.test(value)) score++;
+
+        const bars = passwordStrength.querySelectorAll("span");
+
+        const strengthColors = [
+            "#bd3547",
+            "#df8a36",
+            "#c9a24b",
+            "#23824b"
+        ];
+
+        bars.forEach((bar, index) => {
+            bar.style.background =
+                value.length > 0 && index < score
+                    ? strengthColors[Math.max(0, score - 1)]
+                    : "var(--border)";
+        });
+
+        if (!value) {
+            passwordHint.textContent =
+                "Use at least 8 characters with letters and numbers.";
+        } else if (value.length < 8) {
+            passwordHint.textContent =
+                "Your password must contain at least 8 characters.";
+        } else if (score <= 2) {
+            passwordHint.textContent = "Password strength: Weak";
+        } else if (score === 3) {
+            passwordHint.textContent = "Password strength: Good";
+        } else {
+            passwordHint.textContent = "Password strength: Strong";
+        }
+
+        passwordHint.style.color =
+            value.length >= 8 && score >= 3
+                ? "#23824b"
+                : "var(--muted)";
+    }
+
+    password.addEventListener("input", updatePasswordStrength);
+
+    confirmPassword.addEventListener("input", () => {
+        confirmPassword.setCustomValidity(
+            confirmPassword.value &&
+            confirmPassword.value !== password.value
+                ? "Passwords do not match."
+                : ""
+        );
+    });
+
+    password.addEventListener("input", () => {
+        if (confirmPassword.value) {
+            confirmPassword.setCustomValidity(
+                confirmPassword.value !== password.value
+                    ? "Passwords do not match."
+                    : ""
+            );
+        }
+    });
+
+    signupForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        confirmPassword.setCustomValidity(
+            confirmPassword.value !== password.value
+                ? "Passwords do not match."
+                : ""
+        );
+
+        if (!signupForm.checkValidity()) {
+            signupForm.reportValidity();
+            return;
+        }
+
+        showMessage(
+            "Your details are valid. Connect your registration backend to create your account.",
+            "success"
+        );
+    });
+
+    document.getElementById("googleSignup").addEventListener("click", () => {
+        showMessage(
+            "Connect Google OAuth to enable account registration with Google.",
+            "error"
+        );
+    });
+
+    document.getElementById("appleSignup").addEventListener("click", () => {
+        showMessage(
+            "Connect Apple authentication to enable account registration with Apple.",
+            "error"
+        );
+    });
+
+    [fullName, email, password, confirmPassword].forEach((input) => {
+        input.addEventListener("input", () => {
+            formMessage.textContent = "";
+            formMessage.className = "form-message";
+        });
+    });
+});
+    </script>
+</body>
+</html>
