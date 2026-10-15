@@ -277,7 +277,7 @@ a {
 
     background: var(--surface);
     color: var(--text);
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
 
     font-size: 12px;
     font-weight: 700;
@@ -320,7 +320,7 @@ a {
 
     background: var(--primary);
     color: var(--white);
-    border: 1px solid var(--secondary);
+    border: 3px solid var(--secondary);
 
     font-size: 13px;
     font-weight: 700;
@@ -1010,7 +1010,7 @@ body {
     max-width: 550px;
     margin: 0 0 34px;
     color: rgba(255, 255, 255, 0.82);
-    font-size: 14px;
+    font-size: 18px;
     line-height: 2;
 }
 
@@ -1338,7 +1338,7 @@ body {
 
 .service-card-label {
     color: #9B7938;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 700;
     letter-spacing: 1.6px;
 }
@@ -1364,7 +1364,7 @@ body {
     align-items: center;
     gap: 12px;
     color: var(--primary);
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 700;
 }
 

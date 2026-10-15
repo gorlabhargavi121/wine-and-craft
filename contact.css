@@ -275,7 +275,7 @@ a {
 
     background: var(--surface);
     color: var(--text);
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
 
     font-size: 12px;
     font-weight: 700;
@@ -318,7 +318,7 @@ a {
 
     background: var(--primary);
     color: var(--white);
-    border: 1px solid var(--secondary);
+    border: 3px solid var(--secondary);
 
     font-size: 13px;
     font-weight: 700;
@@ -1063,13 +1063,36 @@ h1 em {
     color: var(--primary-dark);
     background: var(--secondary);
     box-shadow: 0 10px 28px rgba(201, 162, 75, 0.18);
+    border: 1px solid var(--secondary);
 }
 
 .btn-gold:hover {
     background: var(--gold-light);
     box-shadow: 0 15px 35px rgba(201, 162, 75, 0.3);
 }
-
+.btn-primary-1{
+   display: inline-flex;
+    min-height: 52px;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 700;
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+        border: 1px solid var(--secondary);
+    background: var(--primary);
+    color: var(--white); 
+}
+.btn-primary-1:hover{
+   transform: translateY(-4px);
+     background: var(--black);
+    color: var(--secondary); 
+}
 .text-link {
     display: inline-flex;
     align-items: center;

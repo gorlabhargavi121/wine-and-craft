@@ -276,7 +276,7 @@ a {
 
     background: var(--surface);
     color: var(--text);
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
 
     font-size: 12px;
     font-weight: 700;
@@ -319,7 +319,7 @@ a {
 
     background: var(--primary);
     color: var(--white);
-    border: 1px solid var(--secondary);
+    border: 3px solid var(--secondary);
 
     font-size: 13px;
     font-weight: 700;
@@ -1089,7 +1089,7 @@ body {
     padding: 100px max(7%, calc((100% - var(--about-width)) / 2));
     overflow: hidden;
     isolation: isolate;
-    background: #291419 url("images/14.jpg") center 45% / cover no-repeat;
+    background: #291419 url("images/29.jpg") center 45% / cover no-repeat;
     color: #FFFFFF;
 }
 

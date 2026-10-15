@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve Your Experience | Wine & Craft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="cta.css">
+</head>
+<body>
+
+    <main class="booking-page">
+        <div class="page-controls">
+            <button class="icon-control" id="directionBtn" type="button" aria-label="Switch to right-to-left layout" title="Switch text direction">
+                <i class="fa-solid fa-right-left" id="directionIcon"></i>
+            </button>
+            <button class="icon-control" id="themeBtn" type="button" aria-label="Switch to dark mode" title="Toggle color theme">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+            </button>
+        </div>
+
+        <div class="booking-card">
+            <div class="brand-area">
+                <a href="index.html" class="booking-brand" aria-label="Wine and Craft home">
+                    <span class="brand-emblem">
+                        <img src="images/logo.png" alt="">
+                    </span>
+                    <span class="brand-name">
+                        <span>Wine</span><span class="brand-amp">&</span><span>Craft</span>
+                    </span>
+                </a>
+                <p class="brand-tagline">Wine & Craft Spirits Store</p>
+                <span class="brand-decoration"></span>
+            </div>
+
+            <section class="booking-hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-icon">
+                        <i class="fa-solid fa-wine-glass-empty"></i>
+                    </span>
+                    <span class="hero-eyebrow">AN EXPERIENCE TO REMEMBER</span>
+                    <h1>Reserve Your <span>Tasting</span></h1>
+                    <p>Discover exceptional wines, explore craft spirits, and make every special moment unforgettable.</p>
+                </div>
+                <span class="hero-corner hero-corner-one"></span>
+                <span class="hero-corner hero-corner-two"></span>
+            </section>
+
+            <section class="booking-form-section">
+                <div class="form-heading">
+                    <span class="section-eyebrow">YOUR NEXT SPECIAL MOMENT</span>
+                    <h2>Plan Your Experience</h2>
+                    <p>Share your details and our team can help you plan your visit.</p>
+                </div>
+
+                <form id="wineBookingForm" class="wine-booking-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span>*</span></label>
+                            <div class="input-wrap">
+                                <i class="fa-regular fa-user field-icon"></i>
+                                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" autocomplete="name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span>*</span></label>
+                            <div class="input-wrap">
+                                <i class="fa-regular fa-envelope field-icon"></i>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span>*</span></label>
+                            <div class="input-wrap">
+                                <i class="fa-solid fa-phone field-icon"></i>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" autocomplete="tel" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experienceType">Experience Type <span>*</span></label>
+                            <div class="input-wrap">
+                                <i class="fa-solid fa-champagne-glasses field-icon"></i>
+                                <select id="experienceType" name="experienceType" required>
+                                    <option value="" disabled selected>Select experience type</option>
+                                    <option value="Wine Tasting">Wine Tasting</option>
+                                    <option value="Craft Spirits Tasting">Craft Spirits Tasting</option>
+                                    <option value="Private Event">Private Event Consultation</option>
+                                    <option value="Gift Consultation">Gifting Consultation</option>
+                                    <option value="Corporate Gathering">Corporate Gathering</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="visitDate">Preferred Date <span>*</span></label>
+                            <div class="input-wrap">
+                                <i class="fa-regular fa-calendar field-icon"></i>
+                                <input type="date" id="visitDate" name="visitDate" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="visitors">Number of Guests <span>*</span></label>
+                            <div class="input-wrap">
+                                <i class="fa-solid fa-users field-icon"></i>
+                                <select id="visitors" name="visitors" required>
+                                    <option value="" disabled selected>Select number of guests</option>
+                                    <option value="1">1 guest</option>
+                                    <option value="2">2 guests</option>
+                                    <option value="3-5">3–5 guests</option>
+                                    <option value="6-10">6–10 guests</option>
+                                    <option value="11+">11 or more guests</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="visitTime">Preferred Time</label>
+                            <div class="input-wrap">
+                                <i class="fa-regular fa-clock field-icon"></i>
+                                <select id="visitTime" name="visitTime">
+                                    <option value="" selected>Choose a preferred time</option>
+                                    <option value="Morning">Morning</option>
+                                    <option value="Afternoon">Afternoon</option>
+                                    <option value="Evening">Evening</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="message">Message <span class="optional">(Optional)</span></label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your occasion or any preferences..."></textarea>
+                        </div>
+                    </div>
+
+                    <label class="consent-row" for="consent">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <span class="custom-checkbox"></span>
+                        <span class="consent-text">I agree to be contacted by Wine & Craft regarding my reservation request.</span>
+                    </label>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Submit Reservation Request</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
+                </form>
+
+                <div class="booking-contact">
+                    <a href="mailto:hello@wineandcraft.com">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>hello@wineandcraft.com</span>
+                    </a>
+                    <a href="tel:+910000000000">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 00000 00000</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <p class="page-note">Reservations are subject to confirmation, availability, and applicable local regulations.</p>
+    </main>
+
+    <script>
+        
+document.addEventListener("DOMContentLoaded", function () {
+    const html = document.documentElement;
+    const body = document.body;
+    const directionBtn = document.getElementById("directionBtn");
+    const directionIcon = document.getElementById("directionIcon");
+    const themeBtn = document.getElementById("themeBtn");
+    const themeIcon = document.getElementById("themeIcon");
+    const bookingForm = document.getElementById("wineBookingForm");
+    const formFeedback = document.getElementById("formFeedback");
+    const visitDate = document.getElementById("visitDate");
+    const submitBtn = bookingForm.querySelector(".submit-btn");
+
+    function getStoredValue(key, defaultValue) {
+        try {
+            return localStorage.getItem(key) || defaultValue;
+        } catch (error) {
+            return defaultValue;
+        }
+    }
+
+    function saveStoredValue(key, value) {
+        try {
+            localStorage.setItem(key, value);
+        } catch (error) {
+            return;
+        }
+    }
+
+    function applyTheme(theme) {
+        const isDark = theme === "dark";
+
+        body.classList.toggle("dark-mode", isDark);
+        themeIcon.className = isDark
+            ? "fa-solid fa-sun"
+            : "fa-solid fa-moon";
+
+        themeBtn.setAttribute(
+            "aria-label",
+            isDark ? "Switch to light mode" : "Switch to dark mode"
+        );
+
+        themeBtn.setAttribute(
+            "title",
+            isDark ? "Switch to light mode" : "Switch to dark mode"
+        );
+
+        themeBtn.setAttribute("aria-pressed", String(isDark));
+    }
+
+    function applyDirection(direction) {
+        const isRTL = direction === "rtl";
+
+        html.setAttribute("dir", direction);
+
+        directionIcon.className = isRTL
+            ? "fa-solid fa-left-right"
+            : "fa-solid fa-right-left";
+
+        directionBtn.setAttribute(
+            "aria-label",
+            isRTL
+                ? "Switch to left-to-right layout"
+                : "Switch to right-to-left layout"
+        );
+
+        directionBtn.setAttribute(
+            "title",
+            isRTL ? "Switch to LTR" : "Switch to RTL"
+        );
+
+        directionBtn.setAttribute("aria-pressed", String(isRTL));
+    }
+
+    applyTheme(getStoredValue("wineCraftTheme", "light"));
+    applyDirection(getStoredValue("wineCraftDirection", "ltr"));
+
+    themeBtn.addEventListener("click", function () {
+        const nextTheme = body.classList.contains("dark-mode")
+            ? "light"
+            : "dark";
+
+        applyTheme(nextTheme);
+        saveStoredValue("wineCraftTheme", nextTheme);
+    });
+
+    directionBtn.addEventListener("click", function () {
+        const nextDirection = html.getAttribute("dir") === "rtl"
+            ? "ltr"
+            : "rtl";
+
+        applyDirection(nextDirection);
+        saveStoredValue("wineCraftDirection", nextDirection);
+    });
+
+    function getLocalDate() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, "0");
+        const day = String(now.getDate()).padStart(2, "0");
+
+        return `${year}-${month}-${day}`;
+    }
+
+    visitDate.min = getLocalDate();
+
+    visitDate.addEventListener("change", function () {
+        visitDate.setCustomValidity("");
+
+        if (visitDate.value && visitDate.value < getLocalDate()) {
+            visitDate.setCustomValidity("Please choose today or a future date.");
+            visitDate.reportValidity();
+        }
+    });
+
+    bookingForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        formFeedback.className = "form-feedback";
+        formFeedback.textContent = "";
+
+        if (!bookingForm.checkValidity()) {
+            bookingForm.reportValidity();
+            return;
+        }
+
+        if (visitDate.value < getLocalDate()) {
+            visitDate.setCustomValidity("Please choose today or a future date.");
+            visitDate.reportValidity();
+            return;
+        }
+
+        visitDate.setCustomValidity("");
+
+        formFeedback.textContent = "Your details have been validated. This form is currently a front-end demo and is not connected to a reservation service, so your request has not been sent.";
+        formFeedback.className = "form-feedback visible";
+
+        formFeedback.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
+    });
+
+    bookingForm.addEventListener("input", function () {
+        if (formFeedback.classList.contains("visible")) {
+            formFeedback.className = "form-feedback";
+            formFeedback.textContent = "";
+        }
+    });
+
+    bookingForm.addEventListener("change", function () {
+        if (formFeedback.classList.contains("visible")) {
+            formFeedback.className = "form-feedback";
+            formFeedback.textContent = "";
+        }
+    });
+
+    submitBtn.addEventListener("mouseenter", function () {
+        submitBtn.style.setProperty("--hover-ready", "1");
+    });
+});
+
+    </script>
+</body>
+</html>

@@ -278,7 +278,7 @@ a {
 
     background: var(--surface);
     color: var(--text);
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
 
     font-size: 12px;
     font-weight: 700;
@@ -300,7 +300,7 @@ a {
 .control-btn:hover {
     background: var(--primary);
     color: var(--white);
-    border-color: var(--primary);
+    border-color: var(--secondary);
 }
 
 .control-btn:hover i {
@@ -321,7 +321,7 @@ a {
 
     background: var(--primary);
     color: var(--white);
-    border: 1px solid var(--secondary);
+    border: 3px solid var(--secondary);
 
     font-size: 13px;
     font-weight: 700;
@@ -1043,7 +1043,7 @@ a:focus-visible {
 .wine-home .outline-btn:hover {
     background: var(--black);
     color: var(--secondary);
-    
+    border: 3px solid var(--secondary);
     transform: translateY(-4px);
 }
 
@@ -1075,13 +1075,13 @@ a:focus-visible {
 .wine-home .wine-hero {
     position: relative;
     display: flex;
-    min-height: 500px;
+    min-height: 550px;
     min-height: min(620px, 90vh);
     align-items: center;
     padding: 20px max(7%, calc((100% - var(--wine-container)) / 2));
     overflow: hidden;
     isolation: isolate;
-    background: #281518 url("images/hero.jpg") center 45% / cover no-repeat;
+    background: #281518 url("images/28.jpg") center 45% / cover no-repeat;
     color: white;
 }
 
